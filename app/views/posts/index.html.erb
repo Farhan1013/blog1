@@ -4,7 +4,7 @@
 		
 	</div>
 	<div class="col-md-4">
-		<table>
+		<table class="table table-bordered,">
 			<thread>
 				<tr>
 					<th>title</th>
@@ -13,9 +13,12 @@
 			</thread>
 			  	<%@posts.each do |post| %>
 			<tr>
-				<td><%=post.title %></td>
+				<td class="form-control"><%=post.title %></td>
 				<td><%=post.body %></td>	
 				<td><%= link_to 'Comment', one_path(:post => post.id) %></td>
+				<td><%= link_to 'update', edit_post_path(post) %></td>
+				
+                <td><%= link_to "Delete", delete_post_path(:post => post.id), method: :delete %></td>
 			</tr>
 			<% end %>
 		</table>
@@ -27,5 +30,8 @@
 
 </div>
 <!--New link to create a new post-->
-<%= link_to 'New Post', genesis_path %>
+<%= link_to 'New Post', genesis_path %>	
+
+	
+
 <div class="col-md-4">

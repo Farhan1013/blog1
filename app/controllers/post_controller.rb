@@ -36,9 +36,13 @@ class PostController < ApplicationController
 		end
 	end
 
-	def update
-		@id = params[:post_id]
-		@post = Post.find(@id)
+		def update
+		@post = Post.find(params[:post_id])
+		if @post.update_attributes(post_params)
+			redirect_to post_path
+		else
+			render 'edit'
+		end
 	end
 
 end
