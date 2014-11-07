@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 	
+  resources :users
+
   root 'home#index'
 
   get 'posts/index' => 'posts#index', as: :post
@@ -23,6 +25,11 @@ Rails.application.routes.draw do
   delete "posts/:post" => 'posts#destroy', as: :delete_post
 
   get 'posts/comment' => 'posts#comment', as: :comment
+
+    get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
 
 
 

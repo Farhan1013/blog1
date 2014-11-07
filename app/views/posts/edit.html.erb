@@ -1,4 +1,4 @@
-edit.html.e<h1> Edit this Post! </h1>
+<h1> Edit this Post! </h1>
 
 <%#= raise @post.inspect %>
 <%= form_for(@post, :url => {:action => :update, :controller => :posts}) do |f| %>
@@ -8,7 +8,6 @@ edit.html.e<h1> Edit this Post! </h1>
 	<%=f.text_field :body, :class => 'form-control', :placeholder => '...' %><br>
 	<%= f.submit "Save changes" %>
 <% end %>
- Goes great with:<br>
-  <br><br>
-<br><br>
+
+
 <%= link_to "Return to Our posts", post_path %>
