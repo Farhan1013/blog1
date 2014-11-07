@@ -1,0 +1,6 @@
+<h1>Find comments by an author</h1>
+<%= form_tag("/comment_search/find", method: "post") do %>
+    <%= label_tag(:author, "Enter an author name:") %>
+    <%= text_field_tag(:author) %>
+    <%= submit_tag("Search") %>
+<% end %>		

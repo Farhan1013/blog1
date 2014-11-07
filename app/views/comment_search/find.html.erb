@@ -1,0 +1,11 @@
+<h1>Posts that have at least one comment by the author: </h1>
+
+<!--Only procceed if we actually matched any posts-->
+
+        <p>This post has a comment with the author and maybe some other comments by other authors as well</p>
+        <!--The following loop statement says take the nested comments array..and for each comment therein, 
+            list out the author and the comment-->
+        <% @comments.each do |comment| %>
+        <div><%=comment.author %></div>
+        <div><%=comment.comment %></div>
+        <% end %>

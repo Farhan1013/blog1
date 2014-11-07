@@ -1,0 +1,31 @@
+<div class="row">
+
+	<div class="col-md-4">
+		
+	</div>
+	<div class="col-md-4">
+		<table>
+			<thread>
+				<tr>
+					<th>title</th>
+					<th>content</th>
+				</tr>
+			</thread>
+			  	<%@posts.each do |post| %>
+			<tr>
+				<td><%=post.title %></td>
+				<td><%=post.body %></td>	
+				<td><%= link_to 'Comment', one_path(:post => post.id) %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+	
+		
+	</div>
+
+
+</div>
+<!--New link to create a new post-->
+<%= link_to 'New Post', genesis_path %>
+<div class="col-md-4">
