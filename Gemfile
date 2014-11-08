@@ -4,12 +4,6 @@ gem 'mongoid'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
-gem 'mongoid-rspec'
-
-gem 'rspec-rails'
-
-gem 'pry-rails'
-
 gem 'bcrypt', '~> 3.1.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
