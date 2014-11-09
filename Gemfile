@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
+
 gem 'mongoid'
 
 gem 'bootstrap-sass', '~> 3.2.0'
