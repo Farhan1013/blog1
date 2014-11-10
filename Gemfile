@@ -8,6 +8,8 @@ gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use SCSS for stylesheets

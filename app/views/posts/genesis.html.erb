@@ -1,6 +1,6 @@
 <%= form_for(@post, :url => {:action => :genesis_post, :controller => :posts} ) do |f| %>
 
-<div class="col-md-4">
+<div class="field">
 	<%=f.label :title %><br>
 	<%=f.text_field :title, :class => 'form-control', :placeholder => 'title' %>
 

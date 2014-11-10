@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+    
+    skip_before_filter :authorize
 
     def new
     end
@@ -14,7 +16,7 @@ class SessionsController < ApplicationController
         else
             flash.now.alert = "Email or password is invalid"
             render "new"
-            # redirect_to new_session_path
+            #redirect_to new_session_path
         end
     end
 

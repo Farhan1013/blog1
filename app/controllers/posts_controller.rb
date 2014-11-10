@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+	skip_before_filter :authorize
+
 	def index
 	#define a variable named posts
 	@posts = Post.all

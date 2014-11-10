@@ -1,24 +1,25 @@
 <div class="row">
 
-	<div class="col-md-4">
+
 		
 	</div>
-	<div class="col-md-4">
+
 		<table class="table table-bordered,">
 			<thread>
 				<tr>
 					<th><h1>title<h1></th>
 					<th><h1>content<h1></th>
+						<%= link_to 'Search for comments', comment_search_path %>
 				</tr>
 			</thread>
 			  	<%@posts.each do |post| %>
 			<tr>
-				<td class="form-control"><%=post.title %></td>
-				<td><%=post.body %></td>	
-				<td><%= link_to 'Comment', one_path(:post => post.id) %></td>
-				<td><%= link_to 'update', edit_post_path(post) %></td>
+				<td class="jumbotron"><%=post.title %></td>
+				<td class="jumbotron"><%=post.body %></td>	
+				<td class="jumbotron"><%= link_to 'Comment', one_path(:post => post.id) %></td>
+				<td class="jumbotron"><%= link_to 'update', edit_post_path(post) %></td>
 				
-                <td><%= link_to "Delete", delete_post_path(:post => post.id), method: :delete %></td>
+                <td class="jumbotron"><%= link_to "Delete", delete_post_path(:post => post.id), method: :delete %></td>
 			</tr>
 			<% end %>
 		</table>
@@ -27,7 +28,6 @@
 		
 	</div>
 
-<div class="col-md-4">
 
 </div>
 <!--New link to create a new post-->

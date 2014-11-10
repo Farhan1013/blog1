@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MongoMultiModel</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title>ChitterChatter</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   
+  </head>
+  <body>
   <div id="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+
   <div id="user_header">
     <% if current_user %>
       Logged in as <%= current_user.email %>.
@@ -16,10 +19,11 @@
       <% else %>
       <%= link_to "Sign Up", signup_path %> or
       <%= link_to "Log In", login_path %>
+      
     <% end %>
   </div>
   </div>
 <%= yield %>
+</body> 
 
-</body>
 </html>
