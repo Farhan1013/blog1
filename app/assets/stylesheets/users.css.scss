@@ -3,6 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+.heading {
+	color: white;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -6px black;
+	font-size: 120px;
+}
+
+
+
+.buttons {
+	text-align: center;
+}
+
 .field {
 display: inline-block;
 width: 100%;
